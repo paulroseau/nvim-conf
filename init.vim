@@ -92,3 +92,10 @@ nnoremap <leader>l :set list!<CR>
 " Modify init.vim easily {{{3
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
+
+" FILETYPES {{{1
+" Vimscript {{{2
+augroup filetype_vim
+  autocmd!
+  autocmd FileType vim :setlocal foldmethod=marker
+augroup END
