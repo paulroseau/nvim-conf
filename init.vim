@@ -99,3 +99,11 @@ augroup filetype_vim
   autocmd!
   autocmd FileType vim :setlocal foldmethod=marker
 augroup END
+
+" PLUGINS {{{1
+" INSTALL {{{2
+let s:NVIM_HOME = "/" . join(split($MYVIMRC, "/")[0 : -2], "/")
+let s:PLUGINS_DIR_NAME = "plugged"
+
+call plug#begin(s:NVIM_HOME . "/" . s:PLUGINS_DIR_NAME)
+call plug#end()
