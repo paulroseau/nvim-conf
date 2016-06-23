@@ -106,4 +106,10 @@ let s:NVIM_HOME = "/" . join(split($MYVIMRC, "/")[0 : -2], "/")
 let s:PLUGINS_DIR_NAME = "plugged"
 
 call plug#begin(s:NVIM_HOME . "/" . s:PLUGINS_DIR_NAME)
+Plug 'scrooloose/nerdtree'
 call plug#end()
+
+" MAPPINGS {{{2
+" NERDTree {{{3
+nnoremap <silent> <leader>t :NERDTreeToggle<CR>
+nnoremap <silent> <leader>f :NERDTreeFind <CR>
