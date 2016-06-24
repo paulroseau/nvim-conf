@@ -80,6 +80,17 @@ vnoremap <C-j> xp`[V`]
 inoremap <C-r>e <C-r>+ 
 cnoremap <C-r>e <C-r>+
 
+" Toggle clipboard=unnamedplus use {{{3
+function! ClipboardUseToggle()
+  if &clipboard ==# "unnamedplus"
+    set clipboard=""
+  else
+    set clipboard=unnamedplus
+  endif
+  echom "clipboard=" . &clipboard
+endfunction
+nnoremap <silent> <leader>, :call ClipboardUseToggle()<CR>
+
 " Remove search highlighting {{{3
 nnoremap <leader>h :nohlsearch<CR>
 
