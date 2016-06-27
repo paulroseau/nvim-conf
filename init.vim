@@ -49,8 +49,8 @@ cnoremap <leader>m <Esc>
 tnoremap <leader>m <C-\><C-n> 
 
 " Navigate inside a wrapped line {{{3
-noremap <Up> :normal gk<CR>
-noremap <Down> :normal gj<CR>
+noremap <Up> :normal! gk<CR>
+noremap <Down> :normal! gj<CR>
 
 " Switche between buffers {{{3
 nnoremap <C-l> :bn<CR>
