@@ -118,9 +118,17 @@ let s:PLUGINS_DIR_NAME = "plugged"
 
 call plug#begin(s:NVIM_HOME . "/" . s:PLUGINS_DIR_NAME)
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " MAPPINGS {{{2
 " NERDTree {{{3
 nnoremap <silent> <leader>t :NERDTreeToggle<CR>
 nnoremap <silent> <leader>f :NERDTreeFind <CR>
+
+" AUGROUPS {{{2
+" Fugitive {{{3
+augroup fugitive_plugin
+  autocmd!
+  autocmd BufReadPost fugitive://* set bufhidden=delete
+augroup END
