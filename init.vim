@@ -119,6 +119,7 @@ let s:PLUGINS_DIR_NAME = "plugged"
 
 call plug#begin(s:NVIM_HOME . "/" . s:PLUGINS_DIR_NAME)
 Plug 'altercation/vim-colors-solarized'
+Plug 'nelstrom/vim-visual-star-search'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
