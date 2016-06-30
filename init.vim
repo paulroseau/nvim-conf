@@ -121,7 +121,14 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
+
+" SETTINGS {{{2
+" Airline {{{3
+let g:airline_theme='base16_marrakesh'
+let g:airline_powerline_fonts=1
 
 " MAPPINGS {{{2
 " NERDTree {{{3
