@@ -38,6 +38,9 @@ set tabstop=2     " Sets tab character to correspond to x columns.
 set softtabstop=2 " column offset when PRESSING the tab key or the backspace key.
 set shiftwidth=2  " column offset when using keys '>' and '<' in normal mode.
 
+" Undotree {{{3
+set undofile " Turns on persistent undo history (written to undodir, set $MYVIMRC/undo by default)
+
 " MAPPINGS {{{2
 
 let mapleader = ","
@@ -119,6 +122,7 @@ let s:PLUGINS_DIR_NAME = "plugged"
 
 call plug#begin(s:NVIM_HOME . "/" . s:PLUGINS_DIR_NAME)
 Plug 'altercation/vim-colors-solarized'
+Plug 'mbbill/undotree'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
@@ -140,6 +144,9 @@ colorscheme solarized
 " NERDTree {{{3
 nnoremap <silent> <leader>t :NERDTreeToggle<CR>
 nnoremap <silent> <leader>f :NERDTreeFind <CR>
+
+" Undotree {{{3
+nnoremap <leader>u :UndotreeToggle<CR>
 
 " AUGROUPS {{{2
 " Fugitive {{{3
