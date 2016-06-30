@@ -14,6 +14,7 @@ set background=dark             " Color adapted to dark background.
 set statusline=%f\ %m%=[%l/%L]  " Status line (filename [modified] ...  [currentLine / totalLines])
 set listchars=tab:▸\ ,eol:¬     " Invisible characters representation when :set list.
 set clipboard=unnamedplus       " Copy/Paste to/from clipboard
+set cursorline                  " Highlight line cursor is currently on
 
 " Search {{{3
 set incsearch  " Incremental search.
@@ -117,6 +118,7 @@ let s:NVIM_HOME = "/" . join(split($MYVIMRC, "/")[0 : -2], "/")
 let s:PLUGINS_DIR_NAME = "plugged"
 
 call plug#begin(s:NVIM_HOME . "/" . s:PLUGINS_DIR_NAME)
+Plug 'altercation/vim-colors-solarized'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
@@ -127,8 +129,11 @@ call plug#end()
 
 " SETTINGS {{{2
 " Airline {{{3
-let g:airline_theme='base16_marrakesh'
+let g:airline_theme='solarized'
 let g:airline_powerline_fonts=1
+
+" Solarized {{{3
+colorscheme solarized
 
 " MAPPINGS {{{2
 " NERDTree {{{3

@@ -1,5 +1,11 @@
 # Install
 
+## For Solarized
+
+### For iTerm2
+Go to Profile / Colors 
+Select Solarized (dark) for Color Presets
+
 ## For vim-airline
 
 Install powerline fonts :
