@@ -144,6 +144,7 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 augroup filetype_vim
   autocmd!
   autocmd FileType vim :setlocal foldmethod=marker
+  autocmd FileType vim :nnoremap <buffer> <M-z> :execute ":help " . expand("<cword>")<CR>
 augroup END
 
 " PLUGINS {{{1
