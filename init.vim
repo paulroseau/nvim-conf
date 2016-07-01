@@ -56,6 +56,37 @@ tnoremap <leader>m <C-\><C-n>
 noremap <Up> :normal! gk<CR>
 noremap <Down> :normal! gj<CR>
 
+" Handle window actions with Meta instead of <C-w> {{{3
+" Switching
+nnoremap <M-h> <C-w>h
+nnoremap <M-j> <C-w>j
+nnoremap <M-k> <C-w>k
+nnoremap <M-l> <C-w>l
+
+" Moving
+nnoremap <M-H> <C-w>H
+nnoremap <M-J> <C-w>J
+nnoremap <M-K> <C-w>K
+nnoremap <M-L> <C-w>L
+nnoremap <M-x> <C-w>x
+
+" Resizing
+nnoremap <M-=> <C-w>=
+nnoremap <M-+> <C-w>+
+nnoremap <M--> <C-w>-
+nnoremap <M-<> <C-w><
+nnoremap <M->> <C-w>>
+
+" Creating
+nnoremap <M-n> <C-w>n
+nnoremap <M-s> <C-w>s
+nnoremap <M-v> <C-w>v
+nnoremap <M-]> <C-w>g<C-]>
+
+" Closing
+nnoremap <M-c> <C-w>c
+nnoremap <M-o> <C-w>o
+
 " Switche between buffers {{{3
 nnoremap <C-l> :bn<CR>
 nnoremap <C-h> :bp<CR>
