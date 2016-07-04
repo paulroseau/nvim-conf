@@ -103,13 +103,9 @@ nnoremap <C-]> g<C-]>
 noremap <silent> <S-l> :cprevious<CR>
 noremap <silent> <S-h> :cnext<CR>
 
-" Bubble lines {{{3
-nnoremap <C-k> ddkP
-nnoremap <C-j> ddp
-" `[ = default mark for the last selection start
-" `] = default mark for the last selection end
-vnoremap <C-k> xkP`[V`] 
-vnoremap <C-j> xp`[V`]
+" Move to next fold {{{3
+nnoremap <C-k> zk
+nnoremap <C-j> zj
 
 " Paste from clipboard in insert mode {{{3
 inoremap <C-r>e <C-r>+ 
