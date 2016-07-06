@@ -120,10 +120,10 @@ function! ClipboardUseToggle()
   endif
   echom "clipboard=" . &clipboard
 endfunction
-nnoremap <silent> <leader>, :call ClipboardUseToggle()<CR>
+nnoremap <silent> <leader>r :call ClipboardUseToggle()<CR>
 
 " Remove search highlighting {{{3
-nnoremap <leader>h :nohlsearch<CR>
+nnoremap <silent> <leader>, :nohlsearch<CR>
 
 " Redraws the screen {{{3
 nnoremap <leader>d :redraw!<CR>
