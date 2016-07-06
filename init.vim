@@ -131,6 +131,17 @@ nnoremap <leader>d :redraw!<CR>
 " Toggle display of tabs and EOF {{{3
 nnoremap <leader>l :set list!<CR>
 
+" Remove trailing whitespace {{{3
+" use of '<silent>' to hide what would be output on the command line
+" use of ':silent!' to hide error message when pattern is not found
+nnoremap <silent> <leader>w :silent! execute '/\v( )+$'<CR>
+nnoremap <silent> <leader>W :silent! execute '%substitute/\v( )+$//'<CR>
+
+" TODO make a wrapper that saves current position, current jumplist, etc.
+" executes a command (namely here substitution), jumps back to current position
+" and delete what has been appended to jumplist.
+" function! PreservePosition(f)
+
 " Modify init.vim easily {{{3
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
