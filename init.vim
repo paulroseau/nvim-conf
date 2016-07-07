@@ -38,7 +38,7 @@ set tabstop=2     " Sets tab character to correspond to x columns.
 set softtabstop=2 " column offset when PRESSING the tab key or the backspace key.
 set shiftwidth=2  " column offset when using keys '>' and '<' in normal mode.
 
-" Undotree {{{3
+" Gundo {{{3
 set undofile " Turns on persistent undo history (written to undodir, set $MYVIMRC/undo by default)
 
 " MAPPINGS {{{2
@@ -161,9 +161,9 @@ let s:PLUGINS_DIR_NAME = "plugged"
 
 call plug#begin(s:NVIM_HOME . "/" . s:PLUGINS_DIR_NAME)
 Plug 'altercation/vim-colors-solarized'
-Plug 'mbbill/undotree'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'scrooloose/nerdtree'
+Plug 'sjl/gundo.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -184,8 +184,8 @@ colorscheme solarized
 nnoremap <silent> <leader>t :NERDTreeToggle<CR>
 nnoremap <silent> <leader>f :NERDTreeFind <CR>
 
-" Undotree {{{3
-nnoremap <leader>u :UndotreeToggle<CR>
+" Gundo {{{3
+nnoremap <leader>u :GundoToggle<CR>
 
 " AUGROUPS {{{2
 " Fugitive {{{3
