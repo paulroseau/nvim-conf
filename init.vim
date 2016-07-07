@@ -1,3 +1,4 @@
+" vim:foldmethod=marker
 " GENERAL {{{1
 " SETTINGS {{{2
 " Miscallenous {{{3
@@ -150,7 +151,6 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 " Vimscript {{{2
 augroup filetype_vim
   autocmd!
-  autocmd FileType vim :setlocal foldmethod=marker
   autocmd FileType vim :nnoremap <buffer> <M-z> :execute ":help " . expand("<cword>")<CR>
 augroup END
 
