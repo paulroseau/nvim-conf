@@ -98,9 +98,25 @@ nnoremap <C-h> :bp<CR>
 " g<C-]> is mapped to :tjump <current_word> (displays the list if multiple matches exist)
 nnoremap <C-]> g<C-]>
 
-" Quickfix list navigation {{{3
+" Quickfix list {{{3
+noremap <silent> <leader>q :call QuickfixlistToggle()<CR>
 noremap <silent> <S-l> :cprevious<CR>
 noremap <silent> <S-h> :cnext<CR>
+
+let g:quickfixlist_is_open = 0
+function! QuickfixlistToggle()
+  if g:quickfixlist_is_open == 0
+    copen
+    let g:quickfixlist_is_open = 1
+    let g:quickfixlist_buffer = bufnr("%")
+  else
+    if g:quickfixlist_buffer == bufnr("%")
+      execute winnr('#') . "wincmd w"
+    endif
+    cclose
+    let g:quickfixlist_is_open = 0
+  endif
+endfunction
 
 " Move to next fold {{{3
 nnoremap <C-k> zk
