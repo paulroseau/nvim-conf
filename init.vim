@@ -93,8 +93,6 @@ nnoremap <C-l> :bn<CR>
 nnoremap <C-h> :bp<CR>
 
 " Tag navigation {{{3
-nnoremap <C-Up> :tprevious<CR>
-nnoremap <C-Down> :tnext<CR>
 " Displays the list of multiple match for a tag by default.
 " <C-]> is mapped to :tag <current_word> (jump to the first match) by default.
 " g<C-]> is mapped to :tjump <current_word> (displays the list if multiple matches exist)
