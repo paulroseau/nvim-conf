@@ -140,6 +140,9 @@ nnoremap <silent> <leader>r :call ClipboardUseToggle()<CR>
 " Remove search highlighting {{{3
 nnoremap <silent> <leader>, :nohlsearch<CR>
 
+" Clear command line {{{3
+nnoremap <C-\> :<BS>
+
 " Redraws the screen {{{3
 nnoremap <leader>d :redraw!<CR>
 
