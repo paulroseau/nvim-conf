@@ -122,11 +122,10 @@ endfunction
 nnoremap <C-k> zk
 nnoremap <C-j> zj
 
-" Paste from clipboard in insert mode {{{3
+" Clipboard {{{3
 inoremap <C-r>e <C-r>+
 cnoremap <C-r>e <C-r>+
 
-" Toggle clipboard=unnamedplus use {{{3
 function! ClipboardUseToggle()
   if &clipboard ==# "unnamedplus"
     set clipboard=""
