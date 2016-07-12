@@ -92,11 +92,26 @@ nnoremap <M-o> <C-w>o
 nnoremap <C-l> :bn<CR>
 nnoremap <C-h> :bp<CR>
 
-" Tag navigation {{{3
+" Tags {{{3
 " Displays the list of multiple match for a tag by default.
 " <C-]> is mapped to :tag <current_word> (jump to the first match) by default.
 " g<C-]> is mapped to :tjump <current_word> (displays the list if multiple matches exist)
 nnoremap <C-]> g<C-]>
+
+function! Refresh_tags(...)
+  if !executable('ctags')
+    echohl ErrorMsg
+    echom 'Refresh_tags : `ctags` executable not found, cannot refresh tags.'
+    echohl None
+    return
+  endif
+  if a:0 > 0
+    let dirPath = fnamemodify(a:1, ":p")
+    call jobstart(["ctags", "-f", dirPath . "tags", "-R", dirPath])
+  else
+    call jobstart(["ctags", "-R", "."])
+  endif
+endfunction
 
 " Quickfix list {{{3
 noremap <silent> <leader>q :call QuickfixlistToggle()<CR>
@@ -163,11 +178,17 @@ nnoremap <silent> <leader>W :silent! execute '%substitute/\v( )+$//'<CR>
 nnoremap <leader>ev :edit $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
-" FILETYPES {{{1
+" Auto-commands {{{1
 " Vimscript {{{2
-augroup filetype_vim
+augroup vimscript_augroup
   autocmd!
-  autocmd FileType vim :nnoremap <buffer> <M-z> :execute ":help " . expand("<cword>")<CR>
+  autocmd FileType vim nnoremap <buffer> <M-z> :execute "help" expand("<cword>")<CR>
+augroup END
+
+" Scala {{{2
+augroup scala_augroup
+  autocmd!
+  autocmd BufWritePost *.scala :call Refresh_tags()
 augroup END
 
 " PLUGINS {{{1
