@@ -88,6 +88,9 @@ nnoremap <M-]> <C-w>g<C-]>
 nnoremap <M-c> <C-w>c
 nnoremap <M-o> <C-w>o
 
+" Quickfix
+nnoremap <M-Enter> <C-w><CR>
+
 " Switch between buffers {{{3
 nnoremap <C-l> :bn<CR>
 nnoremap <C-h> :bp<CR>
