@@ -39,9 +39,6 @@ set tabstop=2     " Sets tab character to correspond to x columns.
 set softtabstop=2 " column offset when PRESSING the tab key or the backspace key.
 set shiftwidth=2  " column offset when using keys '>' and '<' in normal mode.
 
-" Gundo {{{3
-set undofile " Turns on persistent undo history (written to undodir, set $MYVIMRC/undo by default)
-
 " MAPPINGS {{{2
 
 let mapleader = ","
