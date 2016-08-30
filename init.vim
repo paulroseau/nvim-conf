@@ -137,6 +137,10 @@ endfunction
 nnoremap <C-k> zk
 nnoremap <C-j> zj
 
+" More/Less foldlevel {{{3
+nnoremap <M-r> zr
+nnoremap <M-e> zm
+
 " Clipboard {{{3
 inoremap <C-r>e <C-r>+
 cnoremap <C-r>e <C-r>+
