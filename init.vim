@@ -189,6 +189,8 @@ let s:PLUGINS_DIR_NAME = "plugged"
 call plug#begin(s:NVIM_HOME . "/" . s:PLUGINS_DIR_NAME)
 Plug 'altercation/vim-colors-solarized'
 Plug 'derekwyatt/vim-scala'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'neomake/neomake'
 Plug 'scrooloose/nerdtree'
