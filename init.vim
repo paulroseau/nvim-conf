@@ -188,6 +188,7 @@ let s:PLUGINS_DIR_NAME = "plugged"
 
 call plug#begin(s:NVIM_HOME . "/" . s:PLUGINS_DIR_NAME)
 Plug 'altercation/vim-colors-solarized'
+Plug 'derekwyatt/vim-scala'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'neomake/neomake'
 Plug 'scrooloose/nerdtree'
