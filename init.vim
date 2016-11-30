@@ -16,6 +16,7 @@ set statusline=%f\ %m%=[%l/%L]  " Status line (filename [modified] ...  [current
 set listchars=tab:▸\ ,eol:¬     " Invisible characters representation when :set list.
 set clipboard=unnamedplus       " Copy/Paste to/from clipboard
 set cursorline                  " Highlight line cursor is currently on
+set completeopt+=noinsert       " Select the first item of popup menu automatically without inserting it
 
 " Search {{{3
 set incsearch  " Incremental search.
@@ -194,6 +195,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'neomake/neomake'
 Plug 'scrooloose/nerdtree'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'sjl/gundo.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
@@ -206,6 +208,9 @@ call plug#end()
 " Airline {{{3
 let g:airline_theme='solarized'
 let g:airline_powerline_fonts=1
+
+" Deoplete {{{3
+let g:deoplete#enable_at_startup = 1
 
 " Solarized {{{3
 colorscheme solarized
