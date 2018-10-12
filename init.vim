@@ -127,6 +127,9 @@ nnoremap <C-j> zj
 nnoremap <M-r> zr
 nnoremap <M-e> zm
 
+" Toggle current fold {{{3
+nnoremap <Space> zA
+
 " Clipboard {{{3
 inoremap <C-r>e <C-r>+
 cnoremap <C-r>e <C-r>+
