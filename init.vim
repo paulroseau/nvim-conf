@@ -200,7 +200,7 @@ Plug 'neomake/neomake'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'sjl/gundo.vim'
+Plug 'mbbill/undotree'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -224,8 +224,8 @@ colorscheme solarized
 nnoremap <silent> <leader>t :NERDTreeToggle<CR>
 nnoremap <silent> <leader>f :NERDTreeFind <CR>
 
-" Gundo {{{3
-nnoremap <leader>u :GundoToggle<CR>
+" Undotree {{{3
+nnoremap <leader>u :UndotreeToggle<CR>
 
 " AUGROUPS {{{2
 " Fugitive {{{3
