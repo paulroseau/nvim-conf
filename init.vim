@@ -115,7 +115,6 @@ function! Refresh_tags(...)
 endfunction
 
 " Quickfix list {{{3
-noremap <silent> <leader>q :Ctoggle<CR>
 noremap <silent> <S-l> :cprevious<CR>
 noremap <silent> <S-h> :cnext<CR>
 
