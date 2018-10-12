@@ -17,6 +17,7 @@ set listchars=tab:▸\ ,eol:¬     " Invisible characters representation when :s
 set clipboard=unnamedplus       " Copy/Paste to/from clipboard
 set cursorline                  " Highlight line cursor is currently on
 set completeopt+=noinsert       " Select the first item of popup menu automatically without inserting it
+set inccommand=nosplit          " Interactively shows the effect of a command (for example substitute)
 
 " Search {{{3
 set incsearch  " Incremental search.
