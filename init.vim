@@ -201,6 +201,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'mbbill/undotree'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'tommcdo/vim-exchange'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
@@ -221,6 +222,15 @@ let g:deoplete#enable_at_startup = 1
 colorscheme solarized
 
 " MAPPINGS {{{2
+" FZF {{{3
+" Use FZF tags in order to select more easily the best candidate
+nnoremap <C-t> :execute "Tags" expand("<cword>")<CR>
+
+" Multiple Cursors {{{3
+let g:multi_cursor_select_all_word_key = '<A-a>'
+let g:multi_cursor_select_all_key      = 'g<A-a>'
+let g:multi_cursor_quit_key = mapleader . 'm'
+
 " NERDTree {{{3
 nnoremap <silent> <leader>t :NERDTreeToggle<CR>
 nnoremap <silent> <leader>f :NERDTreeFind <CR>
