@@ -1,8 +1,30 @@
 # Install
 
+1. Clone this repo at the right place
+
+```
+cd
+mkdir .config
+git clone git@github.com:paulroseau/nvim-conf.git .config/nvim
+```
+
+2. Install python3 (cf. https://realpython.com/installing-python)
+
+3. Set up the plugins
+
+Launch neovim with `nvim` and then type :
+
+```
+:PlugUpgrade
+:PlugInstall
+:UpdateRemotePlugins
+```
+
+The first step is optional.
+
 ## For Solarized
 
-### For iTerm2
+### For iTerm2 - Mac OS X only
 Go to Profile / Colors 
 Select Solarized (dark) for Color Presets
 
@@ -26,8 +48,7 @@ In iTerm2 choose font `Source code Pro for powerline` and set font size to `14`
 
 ### In iTerm2
 
-`C-h` is caught by iTerm2 and translated to `backspace` (check this in insert
-mode pressing `C-h` after typing some keys). 
+`C-h` is caught by iTerm2 and translated to `backspace` (check this in insert mode pressing `C-h` after typing some keys). 
 
 Run the following in your $HOME directory :
 ```
