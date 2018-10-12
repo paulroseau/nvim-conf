@@ -219,7 +219,7 @@ let g:airline_powerline_fonts=1
 let g:deoplete#enable_at_startup = 1
 
 " Solarized {{{3
-colorscheme solarized
+silent! colorscheme solarized " ignore failure if the solarized colorscheme has not been installed yet
 
 " MAPPINGS {{{2
 " FZF {{{3
