@@ -100,21 +100,6 @@ nnoremap <C-h> :bp<CR>
 " g<C-]> is mapped to :tjump <current_word> (displays the list if multiple matches exist)
 nnoremap <C-]> g<C-]>
 
-function! Refresh_tags(...)
-  if !executable('ctags')
-    echohl ErrorMsg
-    echom 'Refresh_tags : `ctags` executable not found, cannot refresh tags.'
-    echohl None
-    return
-  endif
-  if a:0 > 0
-    let dirPath = fnamemodify(a:1, ":p")
-    call jobstart(["ctags", "-f", dirPath . "tags", "-R", dirPath])
-  else
-    call jobstart(["ctags", "-R", "."])
-  endif
-endfunction
-
 " Quickfix list {{{3
 noremap <silent> <S-l> :cprevious<CR>
 noremap <silent> <S-h> :cnext<CR>
@@ -181,7 +166,6 @@ augroup END
 " Scala {{{2
 augroup scala_augroup
   autocmd!
-  autocmd BufWritePost *.scala :call Refresh_tags()
   autocmd BufWritePost *.scala Neomake
 augroup END
 
@@ -195,6 +179,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'derekwyatt/vim-scala'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'neomake/neomake'
 Plug 'scrooloose/nerdcommenter'
